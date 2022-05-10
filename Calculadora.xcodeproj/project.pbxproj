@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A92CB79428289EE600D1F9C4 /* CalculatorAppLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92CB79328289EE600D1F9C4 /* CalculatorAppLogic.swift */; };
 		A968F2DE28280FCB004F89A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F2DD28280FCB004F89A4 /* AppDelegate.swift */; };
 		A968F2E028280FCB004F89A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F2DF28280FCB004F89A4 /* SceneDelegate.swift */; };
 		A968F2E228280FCB004F89A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968F2E128280FCB004F89A4 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A92CB79328289EE600D1F9C4 /* CalculatorAppLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorAppLogic.swift; sourceTree = "<group>"; };
 		A968F2DA28280FCB004F89A4 /* Calculadora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculadora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A968F2DD28280FCB004F89A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A968F2DF28280FCB004F89A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				A968F2E628280FCE004F89A4 /* Assets.xcassets */,
 				A968F2E828280FCE004F89A4 /* LaunchScreen.storyboard */,
 				A968F2EB28280FCE004F89A4 /* Info.plist */,
+				A92CB79328289EE600D1F9C4 /* CalculatorAppLogic.swift */,
 			);
 			path = Calculadora;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 				A968F2E228280FCB004F89A4 /* ViewController.swift in Sources */,
 				A968F2DE28280FCB004F89A4 /* AppDelegate.swift in Sources */,
 				A968F2E028280FCB004F89A4 /* SceneDelegate.swift in Sources */,
+				A92CB79428289EE600D1F9C4 /* CalculatorAppLogic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
