@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     var calcResultNumber: Double = 0
     var stringResult: String = ""
     var lastButtonClicked: String = ""
+    var borderButtonSize = 20
+    var fontSize = 40
     
     @IBAction func actionButton(_ sender: UIButton){
         isTextInScreen()
@@ -162,9 +164,9 @@ class ViewController: UIViewController {
         containerScreenView.backgroundColor = .black
         
         NSLayoutConstraint.activate([
-            containerScreenView.widthAnchor.constraint(equalTo: containerAppView.widthAnchor, multiplier: 1),
-            containerScreenView.heightAnchor.constraint(equalTo: containerAppView.heightAnchor, multiplier: 0.4),
-            containerScreenView.topAnchor.constraint(equalTo: containerAppView.safeAreaLayoutGuide.topAnchor),
+            containerScreenView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
+            containerScreenView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
+            containerScreenView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             containerScreenView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerScreenView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
@@ -180,11 +182,11 @@ class ViewController: UIViewController {
         
         
         NSLayoutConstraint.activate([
-            containerButtonsView.widthAnchor.constraint(equalTo: containerAppView.widthAnchor, multiplier: 1),
-            containerButtonsView.heightAnchor.constraint(equalTo: containerAppView.heightAnchor, multiplier: 0.6),
-            containerButtonsView.bottomAnchor.constraint(equalTo: containerAppView.safeAreaLayoutGuide.bottomAnchor),
-            containerButtonsView.trailingAnchor.constraint(equalTo: containerAppView.safeAreaLayoutGuide.trailingAnchor),
-            containerButtonsView.leadingAnchor.constraint(equalTo: containerAppView.safeAreaLayoutGuide.leadingAnchor)
+            containerButtonsView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
+            containerButtonsView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
+            containerButtonsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            containerButtonsView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            containerButtonsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
         ])
     }
     
@@ -194,143 +196,143 @@ class ViewController: UIViewController {
         zeroButton = UIButton()
         zeroButton.backgroundColor = .systemGray
         zeroButton.layer.borderWidth = 1
-        zeroButton.layer.cornerRadius = 40
+        zeroButton.layer.cornerRadius = CGFloat(borderButtonSize)
         zeroButton.setTitle("0", for: .normal)
-        zeroButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        zeroButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         oneButton = UIButton()
         oneButton.backgroundColor = .systemGray
         oneButton.layer.borderWidth = 1
-        oneButton.layer.cornerRadius = 40
+        oneButton.layer.cornerRadius = CGFloat(borderButtonSize)
         oneButton.setTitle("1", for: .normal)
-        oneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        oneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         twoButton = UIButton()
         twoButton.backgroundColor = .systemGray
         twoButton.layer.borderWidth = 1
-        twoButton.layer.cornerRadius = 40
+        twoButton.layer.cornerRadius = CGFloat(borderButtonSize)
         twoButton.setTitle("2", for: .normal)
-        twoButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        twoButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         threeButton = UIButton()
         threeButton.backgroundColor = .systemGray
         threeButton.layer.borderWidth = 1
-        threeButton.layer.cornerRadius = 40
+        threeButton.layer.cornerRadius = CGFloat(borderButtonSize)
         threeButton.setTitle("3", for: .normal)
-        threeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        threeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         fourButton = UIButton()
         fourButton.backgroundColor = .systemGray
         fourButton.layer.borderWidth = 1
-        fourButton.layer.cornerRadius = 40
+        fourButton.layer.cornerRadius = CGFloat(borderButtonSize)
         fourButton.setTitle("4", for: .normal)
-        fourButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        fourButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         
         fiveButton = UIButton()
         fiveButton.backgroundColor = .systemGray
         fiveButton.layer.borderWidth = 1
-        fiveButton.layer.cornerRadius = 40
+        fiveButton.layer.cornerRadius = CGFloat(borderButtonSize)
         fiveButton.setTitle("5", for: .normal)
-        fiveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        fiveButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         sixButton = UIButton()
         sixButton.backgroundColor = .systemGray
         sixButton.layer.borderWidth = 1
-        sixButton.layer.cornerRadius = 40
+        sixButton.layer.cornerRadius = CGFloat(borderButtonSize)
         sixButton.setTitle("6", for: .normal)
-        sixButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        sixButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         sevenButton = UIButton()
         sevenButton.backgroundColor = .systemGray
         sevenButton.layer.borderWidth = 1
-        sevenButton.layer.cornerRadius = 40
+        sevenButton.layer.cornerRadius = CGFloat(borderButtonSize)
         sevenButton.setTitle("7", for: .normal)
-        sevenButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        sevenButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         eightButton = UIButton()
         eightButton.backgroundColor = .systemGray
         eightButton.layer.borderWidth = 1
-        eightButton.layer.cornerRadius = 40
+        eightButton.layer.cornerRadius = CGFloat(borderButtonSize)
         eightButton.setTitle("8", for: .normal)
-        eightButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        eightButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         nineButton = UIButton()
         nineButton.backgroundColor = .systemGray
         nineButton.layer.borderWidth = 1
-        nineButton.layer.cornerRadius = 40
+        nineButton.layer.cornerRadius = CGFloat(borderButtonSize)
         nineButton.setTitle("9", for: .normal)
-        nineButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        nineButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         divButton = UIButton()
         divButton.backgroundColor = .systemOrange
         divButton.layer.borderWidth = 1
-        divButton.layer.cornerRadius = 40
+        divButton.layer.cornerRadius = CGFloat(borderButtonSize)
         divButton.setTitle("/", for: .normal)
-        divButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        divButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         multButton = UIButton()
         multButton.backgroundColor = .systemOrange
         multButton.layer.borderWidth = 1
-        multButton.layer.cornerRadius = 40
+        multButton.layer.cornerRadius = CGFloat(borderButtonSize)
         multButton.setTitle("x", for: .normal)
-        multButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        multButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         sumButton = UIButton()
         sumButton.backgroundColor = .systemOrange
         sumButton.layer.borderWidth = 1
-        sumButton.layer.cornerRadius = 40
+        sumButton.layer.cornerRadius = CGFloat(borderButtonSize)
         sumButton.setTitle("+", for: .normal)
-        sumButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        sumButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         subButton = UIButton()
         subButton.backgroundColor = .systemOrange
         subButton.layer.borderWidth = 1
-        subButton.layer.cornerRadius = 40
+        subButton.layer.cornerRadius = CGFloat(borderButtonSize)
         subButton.setTitle("-", for: .normal)
-        subButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        subButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         clearButton = UIButton()
         clearButton.backgroundColor = .systemGray2
         clearButton.layer.borderWidth = 1
-        clearButton.layer.cornerRadius = 40
+        clearButton.layer.cornerRadius = CGFloat(borderButtonSize)
         clearButton.setTitle("AC", for: .normal)
-        clearButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        clearButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         calcButton = UIButton()
         calcButton.backgroundColor = .systemOrange
         calcButton.layer.borderWidth = 1
-        calcButton.layer.cornerRadius = 40
+        calcButton.layer.cornerRadius = CGFloat(borderButtonSize)
         calcButton.setTitle("=", for: .normal)
-        calcButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        calcButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         deleteButton = UIButton()
         deleteButton.backgroundColor = .systemGray2
         deleteButton.layer.borderWidth = 1
-        deleteButton.layer.cornerRadius = 40
+        deleteButton.layer.cornerRadius = CGFloat(borderButtonSize)
         deleteButton.setTitle("Del", for: .normal)
-        deleteButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        deleteButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         decimalButton = UIButton()
         decimalButton.backgroundColor = .systemGray
         decimalButton.layer.borderWidth = 1
-        decimalButton.layer.cornerRadius = 40
+        decimalButton.layer.cornerRadius = CGFloat(borderButtonSize)
         decimalButton.setTitle(".", for: .normal)
-        decimalButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        decimalButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         restButton = UIButton()
         restButton.backgroundColor = .systemGray2
         restButton.layer.borderWidth = 1
-        restButton.layer.cornerRadius = 40
+        restButton.layer.cornerRadius = CGFloat(borderButtonSize)
         restButton.setTitle("%", for: .normal)
-        restButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        restButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         changeCalculatorButton = UIButton()
         changeCalculatorButton.backgroundColor = .systemOrange
         changeCalculatorButton.layer.borderWidth = 1
-        changeCalculatorButton.layer.cornerRadius = 40
+        changeCalculatorButton.layer.cornerRadius = CGFloat(borderButtonSize)
         changeCalculatorButton.setTitle("#", for: .normal)
-        changeCalculatorButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 40)
+        changeCalculatorButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
         
         let firstLineButtonStackView = UIStackView(arrangedSubviews:
             [clearButton, deleteButton, restButton, divButton])
