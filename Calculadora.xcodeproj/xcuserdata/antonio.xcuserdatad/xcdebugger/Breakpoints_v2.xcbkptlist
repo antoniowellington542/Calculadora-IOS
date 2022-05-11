@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E6E7B213-0372-44D3-8BBC-864129CD0433"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Calculadora/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC - 7880a1bba486129"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculadora.ViewController.calculator.getter : Calculadora.CalculatorAppLogic"
+                  moduleName = "Calculadora"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Desktop/app1/Calculadora/Calculadora/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC - 1cde32cd0c379925"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculadora.ViewController.calculator.setter : Calculadora.CalculatorAppLogic"
+                  moduleName = "Calculadora"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Desktop/app1/Calculadora/Calculadora/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC - 75253a57b93da0af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculadora.ViewController.calculator.modify : Calculadora.CalculatorAppLogic"
+                  moduleName = "Calculadora"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Desktop/app1/Calculadora/Calculadora/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC - f5e46645e1e8aff7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculadora.ViewController.calculator.modify : Calculadora.CalculatorAppLogic with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Calculadora"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Desktop/app1/Calculadora/Calculadora/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC - 80d6cbc47c93a161"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculadora.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Calculadora.ViewController"
+                  moduleName = "Calculadora"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Desktop/app1/Calculadora/Calculadora/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "938">
+               </Location>
+               <Location
+                  uuid = "C1E64094-B82D-4A02-A8A7-BCB49F98D1BC - fe42387f7dc11664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Calculadora.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Calculadora.ViewController&gt;"
+                  moduleName = "Calculadora"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonio/Desktop/app1/Calculadora/Calculadora/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "895">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

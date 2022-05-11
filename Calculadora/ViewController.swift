@@ -7,8 +7,30 @@
 
 import UIKit
 
+enum Buttons: String{
+    case zero = "0"
+    case one = "1"
+    case two = "2"
+    case three = "3"
+    case four = "4"
+    case five = "5"
+    case six = "6"
+    case seven = "7"
+    case eight = "8"
+    case nine = "9"
+    case sum = "+"
+    case sub = "-"
+    case mult = "x"
+    case div = "/"
+    case equal = "="
+    case rest = "%"
+    case del = "Del"
+    case point = "."
+}
+
 class ViewController: UIViewController {
     
+    @IBOutlet var buttonNumber: UIButton!
     @IBOutlet var sumButton: UIButton!
     @IBOutlet var subButton: UIButton!
     @IBOutlet var multButton: UIButton!
@@ -34,72 +56,74 @@ class ViewController: UIViewController {
     var calcResultNumber: Double = 0
     var stringResult: String = ""
     var lastButtonClicked: String = ""
-    var borderButtonSize = 20
+    var borderButtonSize = 10
     var fontSize = 40
     
     @IBAction func actionButton(_ sender: UIButton){
         isTextInScreen()
-        print(calcResultNumber)
+        
+        //print(sender.tag)
+        
         switch sender {
             case zeroButton:
-                stringResult += "0"
-                containerCalcTextView.text! += "0"
+                stringResult += Buttons.zero.rawValue
+                containerCalcTextView.text! += Buttons.zero.rawValue
                 break
             case oneButton:
-                stringResult += "1"
-                containerCalcTextView.text! += "1"
+                stringResult += Buttons.one.rawValue
+                containerCalcTextView.text! += Buttons.one.rawValue
                 break
             case twoButton:
-                stringResult += "2"
-                containerCalcTextView.text! += "2"
+                stringResult += Buttons.two.rawValue
+                containerCalcTextView.text! += Buttons.two.rawValue
                 break
             case threeButton:
-                stringResult += "3"
-                containerCalcTextView.text! += "3"
+                stringResult += Buttons.three.rawValue
+                containerCalcTextView.text! += Buttons.three.rawValue
                 break
             case fourButton:
-                stringResult += "4"
-                containerCalcTextView.text! += "4"
+                stringResult += Buttons.four.rawValue
+                containerCalcTextView.text! += Buttons.four.rawValue
                 break
             case fiveButton:
-                stringResult += "5"
-                containerCalcTextView.text! += "5"
+                stringResult += Buttons.five.rawValue
+                containerCalcTextView.text! += Buttons.five.rawValue
                 break
             case sixButton:
-                stringResult += "6"
-                containerCalcTextView.text! += "6"
+                stringResult += Buttons.six.rawValue
+                containerCalcTextView.text! += Buttons.six.rawValue
                 break
             case sevenButton:
-                stringResult += "7"
-                containerCalcTextView.text! += "7"
+                stringResult += Buttons.seven.rawValue
+                containerCalcTextView.text! += Buttons.seven.rawValue
                 break
             case eightButton:
-                stringResult += "8"
-                containerCalcTextView.text! += "8"
+                stringResult += Buttons.eight.rawValue
+                containerCalcTextView.text! += Buttons.eight.rawValue
                 break
             case nineButton:
-                stringResult += "9"
-                containerCalcTextView.text! += "9"
+                stringResult += Buttons.nine.rawValue
+                containerCalcTextView.text! += Buttons.nine.rawValue
                 break
             case sumButton:
                 finalCalc()
-                lastButtonClicked = "+"
-                containerCalcTextView.text! += "+"
+                lastButtonClicked = Buttons.sum.rawValue
+                containerCalcTextView.text! += Buttons.sum.rawValue
                 break
             case multButton:
                 finalCalc()
-                lastButtonClicked = "x"
-                containerCalcTextView.text! += "x"
+                lastButtonClicked = Buttons.mult.rawValue
+                containerCalcTextView.text! += Buttons.mult.rawValue
                 break
             case subButton:
                 finalCalc()
-                lastButtonClicked = "-"
-                containerCalcTextView.text! += "-"
+                lastButtonClicked = Buttons.sub.rawValue
+                containerCalcTextView.text! += Buttons.sub.rawValue
                 break
             case divButton:
                 finalCalc()
-                lastButtonClicked = "/"
-                containerCalcTextView.text! += "/"
+                lastButtonClicked = Buttons.div.rawValue
+                containerCalcTextView.text! += Buttons.div.rawValue
                 break
             case clearButton:
                 containerCalcTextView.text = "0"
@@ -114,8 +138,8 @@ class ViewController: UIViewController {
                 containerCalcTextView.text = String((numberFormatter.string(from: calcResultNumber as NSNumber)!))
                 break
             case decimalButton:
-                stringResult += "."
-                containerCalcTextView.text! += "."
+                stringResult += Buttons.point.rawValue
+                containerCalcTextView.text! += Buttons.point.rawValue
                 break
             case deleteButton:
                 let cutString: String = String(containerCalcTextView.text!.dropLast())
@@ -127,8 +151,8 @@ class ViewController: UIViewController {
                 break
             case restButton:
                 finalCalc()
-                lastButtonClicked = "%"
-                containerCalcTextView.text! += "%"
+                lastButtonClicked = Buttons.rest.rawValue
+                containerCalcTextView.text! += Buttons.rest.rawValue
                 break
             default:
                 containerCalcTextView.text = ""
@@ -141,31 +165,17 @@ class ViewController: UIViewController {
     var containerCalcTextView: UITextView!
     
     //configuracao do container da tela do app
-    private func setupContainerAppView(){
-        containerAppView = UIView()
-        view.addSubview(containerAppView)
-        containerAppView.translatesAutoresizingMaskIntoConstraints = false
-        containerAppView.backgroundColor = .black
-        
-        NSLayoutConstraint.activate([
-            containerAppView.topAnchor.constraint(equalTo: view.topAnchor),
-            containerAppView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            containerAppView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            containerAppView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-            
-        ])
-    }
     
     // Configuracao do container responsavel por ser a area de Saida dos dados
     private func setupContainerScreenView(){
         containerScreenView = UIView()
         view.addSubview(containerScreenView)
         containerScreenView.translatesAutoresizingMaskIntoConstraints = false
-        containerScreenView.backgroundColor = .black
+        containerScreenView.backgroundColor = .white
         
         NSLayoutConstraint.activate([
             containerScreenView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
-            containerScreenView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4),
+            containerScreenView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3),
             containerScreenView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             containerScreenView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             containerScreenView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
@@ -178,13 +188,13 @@ class ViewController: UIViewController {
         containerButtonsView = UIView()
         view.addSubview(containerButtonsView)
         containerButtonsView.translatesAutoresizingMaskIntoConstraints = false
-        containerButtonsView.backgroundColor = .black
+        containerButtonsView.backgroundColor = .white
         
         
         NSLayoutConstraint.activate([
             containerButtonsView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
-            containerButtonsView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
-            containerButtonsView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            containerButtonsView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
+            containerButtonsView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             containerButtonsView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             containerButtonsView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
         ])
@@ -192,6 +202,7 @@ class ViewController: UIViewController {
     
     // Tela de Botoes
     private func buttonsView(){
+        
         
         zeroButton = UIButton()
         zeroButton.backgroundColor = .systemGray
@@ -263,6 +274,7 @@ class ViewController: UIViewController {
         nineButton.layer.cornerRadius = CGFloat(borderButtonSize)
         nineButton.setTitle("9", for: .normal)
         nineButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: CGFloat(fontSize))
+        
         
         divButton = UIButton()
         divButton.backgroundColor = .systemOrange
@@ -338,7 +350,7 @@ class ViewController: UIViewController {
             [clearButton, deleteButton, restButton, divButton])
         
         firstLineButtonStackView.distribution = .fillEqually
-        firstLineButtonStackView.translatesAutoresizingMaskIntoConstraints = false
+
         
         let secondLineButtonStackView = UIStackView(arrangedSubviews:
             [sevenButton, eightButton, nineButton, multButton])
@@ -373,8 +385,9 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             
             buttonsStackView.topAnchor.constraint(equalTo: containerButtonsView.topAnchor),
-            buttonsStackView.leadingAnchor.constraint(equalTo: containerButtonsView.safeAreaLayoutGuide.leadingAnchor),
-            buttonsStackView.bottomAnchor.constraint(equalTo: containerButtonsView.bottomAnchor),
+            buttonsStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            buttonsStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            buttonsStackView.bottomAnchor.constraint(equalTo: containerButtonsView.safeAreaLayoutGuide.bottomAnchor),
             buttonsStackView.widthAnchor.constraint(equalTo: containerButtonsView.widthAnchor)
 
         ])
@@ -386,8 +399,8 @@ class ViewController: UIViewController {
         containerCalcTextView = UITextView()
         containerScreenView.addSubview(containerCalcTextView)
         containerCalcTextView.text = "0"
-        containerCalcTextView.backgroundColor = .black
-        containerCalcTextView.textColor = .white
+        containerCalcTextView.backgroundColor = .white
+        containerCalcTextView.textColor = .black
         containerCalcTextView.font = UIFont.boldSystemFont(ofSize: 70)
         containerCalcTextView.textAlignment = .right
         containerCalcTextView.isScrollEnabled = false
@@ -405,9 +418,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
-        setupContainerAppView()
         setupContainerScreenView()
         setupContainerButtonsView()
         //setupContainerCalcTextView()
@@ -457,6 +469,6 @@ class ViewController: UIViewController {
     
     }
     
+    
 }
-
 
